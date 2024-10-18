@@ -1,0 +1,1351 @@
+1.area of triangle --
+
+a,b,c=map(int,input().split())
+s=(a+b+c)/2
+sq=(s*(s-a)*(s-b)*(s-c))**0.5
+print("%.2f"%sq)
+
+_____________________________________________________________
+2.count digits---
+
+N = input()
+
+count = 0
+
+for digit in N:
+    digit_int = int(digit)
+    
+    if digit_int != 0 and int(N) % digit_int == 0:
+        count += 1
+
+print(count)
+
+_______________________________________________________________
+
+3.add,sub,mul n div ---
+
+import java.util.*;
+public class main{
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        double a=sc.nextInt();
+        double b=sc.nextInt();
+        System.out.printf("%.2f\n",a+b);
+        System.out.printf("%.2f\n",Math.abs(a-b));
+        System.out.printf("%.2f\n",a*b);
+        System.out.printf("%.2f\n",a/b);
+
+    }
+}
+
+_________________________________________________________________
+4.palindrome check---
+
+def is_palindrome(s):
+    s = s.replace(" ", "").lower()
+    return s == s[::-1] 
+    
+     
+s = input()
+
+if is_palindrome(s):
+    print("1")
+else:
+    print("0")
+____________________________________________________________________
+
+5.sum of n num---
+
+N = int(input())
+s= (N * (N + 1)) // 2
+print(s)
+
+_______________________________________________________________________
+
+6.octal to decimal---
+
+octal = input()
+decimal= int(octal, 8)
+print(decimal)
+
+__________________________________________________________________________________
+7.largest of 3 num--
+
+a, b, c = map(int, input().split())
+largest = max(a, b, c)
+print(largest)
+
+___________________________________________________________________
+
+8.find factors---
+
+N = int(input())
+count= 0
+for i in range(1, N + 1):
+    if N % i == 0:
+        count += 1
+
+print(count)
+
+_______________________________________________________________________
+
+9.pattern 1---
+
+import java.util.Scanner;
+
+public class StarPattern {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                System.out.print("*"); 
+            }
+            System.out.println(); 
+        }
+    }
+}
+
+______________________________________________________________________
+
+10.linear search----
+
+import java.util.Scanner;
+public class ElementSearch {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        int se= sc.nextInt();
+        boolean found = false;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == se) {
+                found = true;
+                break; 
+            }
+        }
+        if (found) {
+            System.out.println("Found");
+        } else {
+            System.out.println("Not Found");
+        }
+    }
+}
+
+_______________________________________________________________________
+
+11.search a number----
+
+import java.util.Scanner;
+
+public class ElementSearch {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        int se = sc.nextInt();
+        boolean found = false;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == se) {
+                found = true;
+                break; 
+            }
+        }
+        if (found) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
+    }
+}
+
+
+__________________________________________________________________
+
+12.divisibility problem---------
+
+a, b = map(int, input().split())
+re = a % b
+moves = (b - re) % b
+print(moves)
+
+_________________________________________________________________________
+
+13.number problem------
+
+a, b = map(int, input().split())
+difference = abs(a - b)
+moves = (difference + 9) // 10 
+print(moves)
+_________________________________________________________________
+
+14.elephant and his friend ------
+
+x = int(input())
+full_steps = x // 5
+if x % 5 != 0:
+    extra = 1
+else:
+    extra= 0
+
+total= full_steps + extra
+print(total)
+
+________________________________________________________________________
+
+15.climbing down-----
+
+A, B, X, Y = map(int, input().split())
+time_walter = A / X
+time_jesse = B / Y
+
+if time_walter < time_jesse:
+    print("Walter")
+elif time_walter > time_jesse:
+    print("Jesse")
+else:
+    print("Both")
+
+_______________________________________________________________________-
+
+16.sum of individual digits----
+
+n = input()
+digit_sum = 0
+for digit in n:
+    digit_sum += int(digit)
+
+print(digit_sum)
+
+____________________________________________________________________
+
+17. 3law at motion--
+
+u, a = map(int, input().split())
+w = (u * a * 1)
+print(w) 
+
+___________________________________________________________________________________
+
+18.multiplication table 3----
+
+N, A, B = map(int, input().split())
+for i in range(A, B + 1):
+    result = N * i
+    print(f"{N} x {i} = {result}")
+_________________________________________________________________________________
+
+19.Multiplication table 2---
+
+N, R = map(int, input().split())
+for i in range(1, R + 1):
+    result = N * i
+    print(f"{N} x {i} = {result}")
+_____________________________________________________________________
+
+20.Multiplication table 1---
+
+N = int(input())
+for i in range(1, 13):
+    result = N * i
+    print(f"{N} x {i} = {result}")
+_______________________________________________________________________________
+
+21.print from a to b---
+
+A, B = map(int, input().split())
+for i in range(A, B + 1):
+    print(i, end=" ")  
+
+______________________________________________________________________
+
+22.difference of sums---
+
+N = int(input())
+difference = ((N * (N + 1) * (2 * N + 1)) // 6) - ((N * (N + 1) // 2) ** 2)
+abs_difference = abs(difference)
+print(abs_difference)
+
+________________________________________________________________________________
+
+23.list of even num upto given num---
+
+A, B = map(int, input().split())
+for num in range(A, B + 1):
+    if num % 2 == 0:
+        print(num, end=" ")
+______________________________________________________________________________
+
+24.bob vs alice--
+
+N = int(input())
+spaced_characters = input()
+words = spaced_characters.split()
+combined_string = ''.join(words)
+print(combined_string)
+
+____________________________________________________________________________
+
+25.sum 2---
+
+A, B, X, Y = map(int, input().split())
+sum_of_numbers = 0
+for num in range(A, B + 1):
+    if num % X == 0 and num % Y != 0:
+        sum_of_numbers += num
+print(sum_of_numbers)
+
+________________________________________________________________________
+
+26.inches to cm---
+
+inches = int(input())
+centimeters = inches * 2.54
+print("{:.2f}".format(centimeters))
+
+______________________________________________________________________
+
+27.capacity---
+
+import java.util.Scanner;
+
+public class DiskCapacity {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+         int T = sc.nextInt();
+        int S = sc.nextInt();
+        int B = sc.nextInt();
+        long capacityBytes = 2L * T * S * B * 512;
+        long capacityKB = capacityBytes / 1024;
+        System.out.println(capacityKB + " KB");
+    }
+}
+
+___________________________________________________________________
+
+28.avg of 2 num----
+
+# Read input numbers Num1 and Num2
+num1, num2 = map(float, input().split())
+average = (num1 + num2) / 2
+print("Average of {:.0f} and {:.0f} is: {:.2f}".format(num1, num2, average))
+
+_______________________________________________________________________________
+
+29.electricity bill-----
+
+import java.util.Scanner;
+
+public class ElectricityBillCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int unitsConsumed = sc.nextInt();
+
+        double costPerUnit, bill, surcharge, totalAmount;
+
+        if (unitsConsumed <= 199) {
+            costPerUnit = 1.20;
+        } else if (unitsConsumed < 400) {
+            costPerUnit = 1.40;
+        } else if (unitsConsumed < 600) {
+            costPerUnit = 1.60;
+        } else if (unitsConsumed < 800) {
+            costPerUnit = 1.80;
+        } else {
+            costPerUnit = 2.00;
+        }
+
+        bill = unitsConsumed * costPerUnit;
+
+        if (bill > 400) {
+            surcharge = 0.15 * bill;
+        } else {
+            surcharge = 0.0;
+        }
+
+        totalAmount = bill + surcharge;
+        System.out.println("Units Consumed: " + unitsConsumed);
+        System.out.printf("Cost per Unit: %.2f%n", costPerUnit);
+        System.out.printf("Bill: %.2f%n", bill);
+        System.out.printf("Surcharge: %.2f%n", surcharge);
+        System.out.printf("Total Amount: %.2f%n", totalAmount);
+
+        sc.close();
+    }
+}
+
+
+_____________________________________________________________________________________
+
+30.Avg weight -----
+
+avg, boy1, boy2 = map(int, input().split())
+boy3 = (avg * 3) - (boy1+boy2)
+print(boy3)
+
+________________________________________________________________________-
+
+31. bag and candies----
+
+N, K, M = map(int, input().split())
+bags_needed = (N + K * M - 1) // (K * M)
+print(bags_needed)
+
+____________________________________________________________________________________
+
+32.blackjack----
+
+A, B = map(int, input().split())
+
+sum1 = A + B
+if sum1 >= 21:
+    print(-1)
+else:
+    third_number = 21 - sum1
+    if 1 <= third_number <= 10:
+        print(third_number)
+    else:
+        print(-1)
+____________________________________________________________________________________________
+
+33.kohli and coins---
+
+X = int(input())
+count1 = 0
+count2 = 0
+count2 = X // 10
+rem = X % 10
+count1= rem // 5
+
+if rem % 5 == 0:
+    total= count1 + count2
+    print(total)
+else:
+    print(-1)
+_____________________________________________________________________________
+
+34.wanda and bread ----
+
+N, M, K = map(int, input().split())
+max_loaves_eaten = M * K
+if max_loaves_eaten >= N:
+    print("YES")
+else:
+    print("NO")
+________________________________________________________________________________
+
+35.last 2 digits of a year--
+
+year = int(input())
+last = "{:02d}".format(year % 100)
+print(last)
+
+_______________________________________________________________________
+
+36.area of triangle---
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double base = sc.nextDouble();
+        double height = sc.nextDouble();
+        double area = 0.5 * base * height;
+        System.out.println((int) area); 
+    }
+}
+
+__________________________________________________________________________
+
+37.character is upper or lower case--
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        char ch = sc.next().charAt(0);
+        if (ch >= 'A' && ch <= 'Z') {
+            System.out.println("uppercase alphabet");
+        }
+        else if (ch >= 'a' && ch <= 'z') {
+            System.out.println("alphabet");
+        }
+        else {
+            System.out.println("not an alphabet");
+        }
+    }
+}
+
+_________________________________________________________________________________
+
+38.weird or not----
+
+n = int(input().strip())
+
+if n % 2 != 0:
+    print("weird")
+elif n % 2 == 0 and 2 <= n <= 5:
+    print("not weird")
+elif n % 2 == 0 and 6 <= n <= 20:
+    print("weird")
+elif n % 2 == 0 and n > 20:
+    print("not weird")
+
+___________________________________________________________________________________
+
+39.odd natural numbers---
+
+N = int(input().strip())
+for i in range(1, N + 1, 2):
+    print(i, end=' ')
+
+_________________________________________________________________________________
+
+40.sum of factors---
+
+N = int(input().strip())
+sum1 = 0
+
+for i in range(1, N // 2 + 1):
+    if N % i == 0:
+        sum1+= i
+
+print(sum1)
+_____________________________________________________________________
+
+41.count of numbers b/w m and n---
+
+
+import java.util.Scanner;
+
+public class DivisibleByTwoAndThree {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int M = scanner.nextInt();
+        int N = scanner.nextInt();
+        
+        int count = 0;
+        
+        for (int i = M; i <= N; i++) {
+            if (i % 2 == 0 && i % 3 == 0) {
+                count++;
+            }
+        }
+        
+        System.out.println(count);
+        
+        scanner.close();
+    }
+}
+
+___________________________________________________________________________
+
+42.count of multiples of 3----
+
+import java.util.Scanner;
+public class MultiplesOf3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int M = scanner.nextInt();
+        int N = scanner.nextInt();
+        int count = 0;
+        for (int i = M; i <= N; i++) {
+            if (i % 3 == 0) {
+                count++;
+            }
+        }
+        System.out.println(count);
+        scanner.close();
+    }
+}
+
+______________________________________________________________________________
+
+43.First N multiples of 3---
+
+n = int(input())
+
+for i in range(1, n + 1):
+    multiple = i * 3
+    if i == n:
+        print(multiple)
+    else:
+        print(multiple, end=" ")
+
+________________________________________________________________________
+
+44.coffee love---
+
+T = int(input())
+for _ in range(T):
+    A, B = map(int, input().split())
+    
+    max_coffees = min(A, B)
+    
+    print(max_coffees)
+
+_________________________________________________________________________
+
+45.first n even natural numbers---
+
+import java.util.Scanner;
+
+public class FirstNEvenNaturalNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+
+        for (int i = n; i >= 1; i--) {
+            int evenNumber = 2 * i;
+            System.out.print(evenNumber);
+
+            if (i > 1) {
+                System.out.print(" ");
+            }
+        }
+
+        System.out.println();
+
+        scanner.close();
+    }
+}
+
+__________________________________________________________________
+
+46.print the color name---
+
+import java.util.Scanner;
+
+public class ColorCodeToName {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String colorCode = scanner.nextLine().trim().toUpperCase();
+        String colorName;
+        switch (colorCode) {
+            case "V":
+                colorName = "Violet";
+                break;
+            case "I":
+                colorName = "Indigo";
+                break;
+            case "B":
+                colorName = "Blue";
+                break;
+            case "G":
+                colorName = "Green";
+                break;
+            case "Y":
+                colorName = "Yellow";
+                break;
+            case "O":
+                colorName = "Orange";
+                break;
+            case "R":
+                colorName = "Red";
+                break;
+            default:
+                colorName = "-1";
+                break;
+        }
+        System.out.println(colorName);
+        scanner.close();
+    }
+}
+
+_____________________________________________________________________________________
+
+47.sum of an array in given range---
+
+import java.util.Scanner;
+
+public class SumInRange {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        int[] arr = new int[N];
+        for (int i = 0; i < N; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        int lowerBound = scanner.nextInt();
+        int upperBound = scanner.nextInt();
+        
+        int sum = 0;
+        for (int i = lowerBound; i <= upperBound; i++) {
+            sum += arr[i];
+        }
+        System.out.println(sum);
+        
+        scanner.close();
+    }
+}
+
+___________________________________________________________________________
+
+48.phone number validation ---
+
+import java.util.Scanner;
+
+public class ValidateMobileNumber {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        String mobileNumber = scanner.nextLine().trim();
+        if (mobileNumber.length() == 10 && !mobileNumber.startsWith("0")) {
+            System.out.println("Valid");
+        } else {
+            System.out.println("Invalid");
+        }
+        
+        scanner.close();
+    }
+}
+
+
+_____________________________________________________________________________
+
+49.make the string great---
+
+def makeGood(s):
+    stack = []
+    for char in s:
+        if stack and abs(ord(stack[-1]) - ord(char)) == 32:
+            stack.pop()  
+        else:
+            stack.append(char) 
+
+    return ''.join(stack)
+
+n = int(input())
+s = input().strip()
+good_string = makeGood(s)
+print(good_string)
+
+_________________________________________________________________________
+
+50.can be a factor----
+
+def is_possible_to_make_divisor(A, B):
+    if B % A == 0:
+        return "YES"
+    elif A * 2 <= B:
+        return "YES"
+    else:
+        return "NO"
+
+T = int(input())
+for _ in range(T):
+    A, B = map(int, input().split())
+    result = is_possible_to_make_divisor(A, B)
+    print(result)
+
+
+________________________________________________________________________________
+
+51.array partition----
+
+def arrayPairSum(nums):
+    nums.sort()
+    total_sum = 0
+    for i in range(0, len(nums), 2):
+        total_sum += nums[i]
+    
+    return total_sum
+
+n = int(input())
+nums = list(map(int, input().split()))
+max_sum = arrayPairSum(nums)
+print(max_sum)
+
+_____________________________________________________________________________
+
+52.String magic 1---
+
+def sum_continuous_numbers(s):
+    num_str = ""
+    total_sum = 0
+    for char in s:
+        if char.isdigit():
+            num_str += char
+        elif num_str:
+            total_sum += int(num_str)
+            num_str = ""
+
+    if num_str:
+        total_sum += int(num_str)
+
+    return total_sum
+
+s = input().strip()
+result = sum_continuous_numbers(s)
+print(result)
+
+_________________________________________________________________________
+
+53.reduce to zero----
+
+def numberOfSteps(num):
+    steps = 0
+    while num > 0:
+        if num % 2 == 0:
+            num //= 2
+        else:
+            num -= 1
+        steps += 1
+    return steps
+
+num = int(input())
+steps = numberOfSteps(num)
+print(steps)
+
+_______________________________________________________________________
+
+54.Is even---
+
+def is_even_or_odd(num):
+    if num % 2 == 0:
+        return 2  
+    else:
+        return 1  
+
+num = int(input())
+result = is_even_or_odd(num)
+print(result)
+
+______________________________________________________________
+
+55.Is odd---
+
+def is_even_or_odd(num):
+    if num % 2 == 0:
+        return 1  
+    else:
+        return 2  
+
+num = int(input())
+result = is_even_or_odd(num)
+print(result)
+
+___________________________________________________________
+
+56.Grades----
+
+phy, chem, bio, math, cs = map(int, input().split())
+total = phy+ chem + bio + math + cs
+per= (total/ 500) * 100
+if per >= 90:
+    grade = "Grade A"
+elif per >= 80:
+    grade = "Grade B"
+elif per >= 70:
+    grade = "Grade C"
+elif per >= 60:
+    grade = "Grade D"
+elif per >= 40:
+    grade = "Grade E"
+else:
+    grade = "Grade F"
+
+print(grade)
+
+______________________________________________________________
+
+57.passed or failed---
+
+marks = list(map(int, input().split()))
+passed = all(mark > 34 for mark in marks)
+result = "PASSED" if passed else "FAILED"
+print(result)
+_________________________________________________________
+
+58.vowel or consonant --
+
+char = input().lower() 
+if char in 'aeiou':
+    result = "VOWEL"
+else:
+    result = "CONSONANT"
+
+print(result)
+
+_______________________________________________________________
+
+59.largest num among 3 num---
+
+import java.util.Scanner;
+public class LargestNumber {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        int num3 = scanner.nextInt();
+        int largest = num1;
+        if (num2 > largest) {
+            largest = num2;
+        }
+        if (num3 > largest) {
+            largest = num3;
+        }
+        System.out.println(largest);
+        scanner.close();
+    }
+}
+
+___________________________________________________________________
+
+60.remove special ---
+
+import java.util.Scanner;
+public class RemoveSpecialCharacters {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String inputString = scanner.nextLine();
+        String result = inputString.replaceAll("[0-9@\\$%]", "");
+        System.out.println(result);
+    }
+}
+
+______________________________________________________________________
+
+61.natural numbers---
+
+import java.util.Scanner;
+public class PrintNaturalNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        for (int i = 1; i <= N; i++) {
+            System.out.print(i + " ");
+        }
+    }
+}
+
+___________________________________________________________________
+62.sum of n natural numbers--
+
+import java.util.Scanner;
+public class SumOfNaturalNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        int sum = (N * (N + 1)) / 2;
+        System.out.println(sum);
+    }
+}
+
+____________________________________________________________________
+
+63.measuring the object ---
+
+import java.util.Scanner;
+public class WeightMeasurement {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int W = scanner.nextInt();
+        int X = scanner.nextInt();
+        int Y = scanner.nextInt();
+        int Z = scanner.nextInt();
+        if (W == X || W == Y || W == Z || W == X + Y || W == X + Z || W == Y + Z || W == X + Y + Z) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
+    }
+}
+
+
+_________________________________________________________________________________________________
+
+64.reverse string---
+
+def reverseString(s):
+    left, right = 0, len(s) - 1
+    while left < right:
+        s[left], s[right] = s[right], s[left]
+        left += 1
+        right -= 1
+
+s = list(input().split())
+reverseString(s)
+print(" ".join(s))
+
+__________________________________________________________________________________________
+
+65.power of a number----
+
+import math
+x, y, M = map(int, input().split())
+result = math.pow(x, y) % M
+print(int(result))
+______________________________________________________________________________________
+
+66.square number---
+
+import math
+def isPerfectSquare(n):
+    sqrt_n = math.sqrt(n)
+    return sqrt_n.is_integer()
+
+n = int(input())
+print(isPerfectSquare(n))
+
+_____________________________________________________________________________
+
+67.palindrome--
+
+def isPalindrome(n):
+    num_str = str(n)
+    return num_str == num_str[::-1]
+
+n = int(input())
+if isPalindrome(n):
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+
+
+________________________________________________________________________________
+
+68.ascii value ---
+
+character = input()
+ascii_value = ord(character)
+print(ascii_value)
+
+_____________________________________________________________________
+
+69.triangle---
+
+def triangleType(a, b, c):
+    if a == b == c:
+        return "Equilateral triangle"
+    elif a == b or a == c or b == c:
+        return "Isosceles triangle"
+    else:
+        return "Scalene triangle"
+
+sides = input().split()
+s1, s2, s3 = map(int, sides)
+result = triangleType(s1, s2, s3)
+print(result)
+__________________________________________________________________________________
+
+70.find the single element----
+
+def findSingleElement(arr):
+    count_dict = {}
+    for num in arr:
+        if num in count_dict:
+            count_dict[num] += 1
+        else:
+            count_dict[num] = 1
+    
+    for num, count in count_dict.items():
+        if count == 1:
+            return num
+
+n = int(input())
+arr = list(map(int, input().split()))
+result = findSingleElement(arr)
+print(result)
+
+_______________________________________________________________________________
+
+71.Arrays equal---
+
+def areArraysEqual(arr1, arr2):
+    if len(arr1) != len(arr2):
+        return 0
+
+    count1 = {}
+    count2 = {}
+
+    for num in arr1:
+        count1[num] = count1.get(num, 0) + 1
+
+    for num in arr2:
+        count2[num] = count2.get(num, 0) + 1
+
+    return 1 if count1 == count2 else 0
+
+n = int(input())
+arr1 = list(map(int, input().split()))
+arr2 = list(map(int, input().split()))
+result = areArraysEqual(arr1, arr2)
+print(result)
+
+________________________________________________________________________________
+
+72.digit game----
+
+x = input()
+y = input()
+calvin_points = 0
+django_points = 0
+for i in range(len(x)):
+    if x[i] > y[i]:
+        calvin_points += 1
+    elif x[i] < y[i]:
+        django_points += 1
+if calvin_points > django_points:
+    print("Calvin")
+elif calvin_points < django_points:
+    print("Django")
+else:
+    print("Tie")
+
+_____________________________________________________________________________
+
+73.sum of first n natural numbers---
+
+n = int(input())
+s= (n * (n + 1)) // 2
+print(s)
+____________________________________________________________________________
+
+74.number divisible with 9---
+
+def is_divisible_by_9(n):
+    digit_sum = 0
+    while n > 0:
+        digit_sum += n % 10
+        n //= 10
+
+    return digit_sum % 9 == 0
+
+number = int(input())
+result = is_divisible_by_9(number)
+print(result)
+
+___________________________________________________________________________
+
+75.biggest of 2 num---
+
+import java.util.Scanner;
+public class FindLargestNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int number1 = sc.nextInt();
+        int number2 = sc.nextInt();
+        int largest = Math.max(number1, number2);
+        System.out.println(largest);
+    }
+}
+
+________________________________________________________________________
+
+76.even or odd---
+
+number = int(input())
+if number % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
+_____________________________________________________________________
+
+77.missing number---
+
+N = int(input())
+arr = list(map(int, input().split()))
+expected_sum = N * (N + 1) // 2
+actual_sum = sum(arr)
+missing = 
+ected_sum - actual_sum
+print(missing)
+
+_____________________________________________________________________
+
+78.second largest---
+
+# Input the value of N
+N = int(input())
+arr = list(map(int, input().split()))
+largest = second_largest = float('-inf')
+for num in arr:
+    if num > largest:
+        second_largest = largest
+        largest = num
+    elif num > second_largest and num != largest:
+        second_largest = num
+        
+if second_largest != float('-inf'):
+    print(second_largest)
+else:
+    print(-1)
+
+_______________________________________________________________________
+
+79.largest number----
+
+N = int(input())
+arr = list(map(int, input().split()))
+max_value = arr[0]
+
+for num in arr:
+    if num > max_value:
+        max_value = num
+
+print(max_value)
+_________________________________________________________________________
+
+80.evenly divides-----
+
+N = input()
+count = 0
+for digit in N:
+    digit = int(digit) 
+    if digit != 0 and int(N) % digit == 0:
+        count += 1
+
+print(count)
+
+_________________________________________________________________________
+
+81.Program to Check Whether The Given Integer is Positive or Negative--
+
+n= int(input())
+
+if n > 0:
+    print("Positive Number")
+elif n < 0:
+    print("Negative Number")
+else:
+    print("Zero")
+
+__________________________________________________________________________
+
+82.compound interest ---
+
+import java.util.*;
+
+public class Test {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int p = sc.nextInt();
+        int r = sc.nextInt();
+        int t = sc.nextInt();
+        double a = p * Math.pow(1 + (r / 100.0), t);
+        System.out.printf("%.2f", a);
+    }
+}
+
+_____________________________________________________________________________
+
+83.count divisors---
+
+def sum_of_divisor_counts(n):
+    div_counts = [0] * (n + 1)
+    
+    for i in range(1, n + 1):
+        for j in range(i, n + 1, i):
+            div_counts[j] += 1
+    
+    return sum(div_counts)
+
+N = int(input())
+result = sum_of_divisor_counts(N)
+print(result)
+
+__________________________________________________________________________________
+
+84.Print Squares of Inputs until reach the -1---
+
+
+while True:
+    num = int(input())
+    
+    if num == -1:
+        break
+    
+    square = num * num
+    print(square)
+
+___________________________________________________________________________________
+
+85.day name---
+
+day_number = int(input())
+if day_number == 1:
+    print("monday")
+elif day_number == 2:
+    print("tuesday")
+elif day_number == 3:
+    print("wednesday")
+elif day_number == 4:
+    print("thursday")
+elif day_number == 5:
+    print("friday")
+elif day_number == 6:
+    print("saturday")
+elif day_number == 7:
+    print("sunday")
+else:
+    print("invalid input")
+
+__________________________________________________________________________________
+
+86.cars 1---
+
+n1=int(input())
+n2=int(input())
+x=int(input())
+if n1>n2:
+    print(-1)
+else:
+    print(x//(n2-n1)+1)
+
+_________________________________________________________________________________
+
+87.Count Odd Pairs---
+
+n=int(input())
+print(n**2//2)
+
+_______________________________________________________________________________
+
+88.Distinct Pairs count---
+
+from itertools import permutations
+n=int(input())
+l=[]
+for i in range(n):
+    l.append(int(input()))
+l=(l)+l
+p=permutations(l,2)
+print(len(set(p)))
+
+_______________________________________________________________________________
+
+89.Climate---
+
+N = int(input())
+if N > 20:
+    print("HOT")
+else:
+    print("COLD")
+
+________________________________________________________________________________
+
+90.Largest Odd Number in String---
+
+def largestOddNumber(S):
+    for i in range(len(S) - 1, -1, -1):
+        if int(S[i]) % 2 == 1:
+            return S[:i+1]
+    return "-1"
+
+S = input()
+result = largestOddNumber(S)
+print(result)
+
+_________________________________________________________________________________
